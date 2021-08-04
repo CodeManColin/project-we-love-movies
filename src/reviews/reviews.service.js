@@ -1,10 +1,7 @@
 const knex = require("../db/connection");
 
 function read(reviewId) {
-  return knex("reviews")
-        .select("*")
-        .where({ review_id: reviewId })
-        .first();
+  return knex("reviews").select("*").where({ review_id: reviewId }).first();
 }
 
 function addCritic(reviews) {
